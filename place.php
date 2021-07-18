@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <?php require_once('permissions/login_access.php'); ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>

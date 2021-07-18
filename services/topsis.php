@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         http_response_code(412);
         echo json_encode(['status' => 412, 'message' => 'ค่าใช้จ่ายต่ำสุด มีค่ามากกว่า ค่าใช้จ่ายสูงสุด กรุณาเลือกใหม่!']);
     } else {
-        $sql = "SELECT att_id,att_name,att_image FROM attractions 
+        $sql = "SELECT att_id,att_name,att_image,att_views FROM attractions 
         WHERE (att_cost BETWEEN :cost_min AND :cost_max) AND att_convenience=:convenience 
         AND att_restaurant=:restaurant AND att_transfer=:transfer AND att_hotel=:hotel 
         AND att_cafe=:cafe AND att_security=:security AND att_hospital=:hospital 

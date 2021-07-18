@@ -32,7 +32,7 @@ require_once('permissions/show_topsis_access.php');
                 $('title').text(res.data['web_name']);
                 $('meta[name=description]').attr('content', res.data['web_description']);
                 $('meta[name=keywords]').attr('content', res.data['web_keywords']);
-                $('link[rel=icon]').attr('href','WEB_SYSTEM/dist/img/'+res.data['web_logo']);
+                $('link[rel=icon]').attr('href', 'WEB_SYSTEM/dist/img/' + res.data['web_logo']);
             }).fail(function(res) {
                 console.log(res);
             });
@@ -71,11 +71,12 @@ require_once('permissions/show_topsis_access.php');
             <div class="row portfolio-column">
                 <?php foreach ($_SESSION['TOPSIS_DATA'] as $row) { ?>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item">
-                        <img src="WEB_SYSTEM/dist/img/attractions/<?= $row['att_image'] ?>" alt="">
+                        <h3 class='text-center'><?= $row['att_name']; ?></h3>
+                        <img src="WEB_SYSTEM/dist/img/attractions/<?= $row['att_image'] ?>" class="img-responsive fit-image" alt="">
                         <div class="hover_overlay">
                             <a class="gallery_img text-center" href="detail.php?id=<?= $row['att_id'] ?>">
-                                <span><?= $row['att_name'] ?></span><br>
-                                <i class="fa fa-eye"></i>
+                                <i class="fa fa-eye"></i><br>
+                                <span><?= $row['att_views'] ?></span>
                             </a>
                         </div>
                     </div>
