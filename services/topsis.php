@@ -5,12 +5,17 @@ header("Content-Type:application/json");
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     require_once('connect.php');
 
+    session_start();
+    if (isset($_SESSION['OTHER_DATA'])) {
+        unset($_SESSION['OTHER_DATA']);
+    }
+
     $sql = "SELECT att_id,att_name,att_image,att_views FROM attractions 
         WHERE att_cost>=:cost
-        OR att_convenience>=:convenience 
-        OR att_restaurant>=:restaurant OR att_transfer>=:transfer OR att_hotel>=:hotel 
-        OR att_cafe>=:cafe OR att_security>=:security OR att_hospital>=:hospital 
-        OR att_police>=:police OR att_parking>=:parking
+        AND att_convenience>=:convenience 
+        AND att_restaurant>=:restaurant AND att_transfer>=:transfer AND att_hotel>=:hotel 
+        AND att_cafe>=:cafe AND att_security>=:security AND att_hospital>=:hospital 
+        AND att_police>=:police AND att_parking>=:parking
         ORDER BY att_convenience DESC";
     $stmt = $pdo->prepare($sql);
 
@@ -28,14 +33,32 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     ])) {
         $rows = $stmt->fetchAll();
         if (empty($rows)) {
-            http_response_code(412);
-            echo json_encode(['status' => 412, 'message' => 'ไม่พบข้อมูล สถานที่ตามที่คุณต้องการ!']);
-        } else {
 
-            session_start();
+            $sql = "SELECT att_id,att_name,att_image,att_views FROM attractions ORDER BY att_convenience DESC";
+            $stmt = $pdo->query($sql);
+            $rows = $stmt->fetchAll();
 
+            
             $_SESSION['TOPSIS_ACCESS'] = TRUE;
             $_SESSION['TOPSIS_DATA'] = $rows;
+
+            http_response_code(200);
+            echo json_encode(['status' => 200, 'message' => 'ค้นหาข้อมูลสำเร็จ!']);
+        } else {
+
+            foreach ($rows as $row) {
+                $att_id[] = $row['att_id'];
+            }
+
+            $sql = "SELECT att_id,att_name,att_image,att_views FROM attractions 
+            WHERE att_id NOT IN ('" . implode("', '", $att_id) . "')";
+            $stmt = $pdo->query($sql);
+            $rows2 = $stmt->fetchAll();
+
+            
+            $_SESSION['TOPSIS_ACCESS'] = TRUE;
+            $_SESSION['TOPSIS_DATA'] = $rows;
+            $_SESSION['OTHER_DATA'] = $rows2;
 
             http_response_code(200);
             echo json_encode(['status' => 200, 'message' => 'ค้นหาข้อมูลสำเร็จ!']);

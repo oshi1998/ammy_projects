@@ -64,14 +64,14 @@ require_once('permissions/show_topsis_access.php');
         <div class="container-fluid clearfix">
             <div class="gallery_menu">
                 <div class="portfolio-menu">
-                    <h1>แนะนำสถานที่ท่องเที่ยว ในจังหวัดมหาสารคาม ที่ตรงตามความต้องการของคุณ (TOPSIS)</h1>
+                    <h1>สถานที่ท่องเที่ยว ในจังหวัดมหาสารคาม ที่ใกล้เคียงความต้องการของคุณมากที่สุด (TOPSIS)</h1>
                 </div>
             </div>
-
+            <?php $no = 1; ?>
             <div class="row portfolio-column">
                 <?php foreach ($_SESSION['TOPSIS_DATA'] as $row) { ?>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item">
-                        <h3 class='text-center'><?= $row['att_name']; ?></h3>
+                        <h3 class='text-center'><?= $no++ . '.' . $row['att_name']; ?></h3>
                         <img src="WEB_SYSTEM/dist/img/attractions/<?= $row['att_image'] ?>" class="img-responsive fit-image" alt="">
                         <div class="hover_overlay">
                             <a class="gallery_img text-center" href="detail.php?id=<?= $row['att_id'] ?>">
@@ -82,9 +82,34 @@ require_once('permissions/show_topsis_access.php');
                     </div>
                 <?php } ?>
             </div>
+            
+            <?php if (isset($_SESSION['OTHER_DATA'])) : ?>
+                <div class="gallery_menu">
+                    <div class="portfolio-menu">
+                        <h1>สถานที่ท่องเที่ยว ในจังหวัดมหาสารคาม อื่นๆ ที่คุณอาจสนใจ</h1>
+                    </div>
+                </div>
+                <?php $no = 1; ?>
+                <div class="row portfolio-column">
+                    <?php foreach ($_SESSION['OTHER_DATA'] as $row) { ?>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item">
+                            <h3 class='text-center'><?= $no++ . '.' . $row['att_name']; ?></h3>
+                            <img src="WEB_SYSTEM/dist/img/attractions/<?= $row['att_image'] ?>" class="img-responsive fit-image" alt="">
+                            <div class="hover_overlay">
+                                <a class="gallery_img text-center" href="detail.php?id=<?= $row['att_id'] ?>">
+                                    <i class="fa fa-eye"></i><br>
+                                    <span><?= $row['att_views'] ?></span>
+                                </a>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php endif ?>
         </div>
     </div>
     <!-- Project Area End -->
+
+
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="dist/js/jquery/jquery-2.2.4.min.js"></script>

@@ -23,7 +23,7 @@ require_once('permissions/detail_access.php');
     <link rel="stylesheet" href="dist/css/style.css">
     <!-- Responsive CSS -->
     <link href="dist/css/responsive.css" rel="stylesheet">
-    
+
     <script>
         function loadWebsite() {
             $.ajax({
@@ -53,8 +53,110 @@ require_once('permissions/detail_access.php');
                 let image = res.image;
                 let html = "";
 
+                if (data.att_cost == 1) {
+                    att_cost = 'ไม่มีค่าใช้จ่าย';
+                } else if (data.att_cost == 2) {
+                    att_cost = 'ค่าใช้จ่ายน้อย';
+                } else if (data.att_cost == 3) {
+                    att_cost = 'ค่าใช้จ่ายปานกลาง';
+                } else {
+                    att_cost = 'ค่าใช้จ่ายมาก';
+                }
+
+                if (data.att_convenience == 1) {
+                    att_convenience = 'กานเข้าถึงไม่สะดวก';
+                } else if (data.att_convenience == 2) {
+                    att_convenience = 'กานเข้าถึงสะดวกน้อย';
+                } else if (data.att_convenience == 3) {
+                    att_convenience = 'กานเข้าถึงสะดวกปานกลาง';
+                } else {
+                    att_convenience = 'กานเข้าถึงสะดวกมาก';
+                }
+
+                if (data.att_restaurant == 1) {
+                    att_restaurant = 'ไม่มีร้านอาหาร';
+                } else if (data.att_restaurant == 2) {
+                    att_restaurant = 'มีร้านอาหารน้อย';
+                } else if (data.att_restaurant == 3) {
+                    att_restaurant = 'มีร้านอาหารปานกลาง';
+                } else {
+                    att_restaurant = 'มีร้านอาหารมาก';
+                }
+
+                if (data.att_transfer == 1) {
+                    att_transfer = 'ไม่มีบริการรถรับส่ง';
+                } else if (data.att_transfer == 2) {
+                    att_transfer = 'มีบริการรถรับส่งน้อย';
+                } else if (data.att_transfer == 3) {
+                    att_transfer = 'มีบริการรถรับส่งปานกลาง';
+                } else {
+                    att_transfer = 'มีบริการรถรับส่งมาก';
+                }
+
+                if (data.att_hotel == 1) {
+                    att_hotel = 'ไม่มีที่พักโรงแรม';
+                } else if (data.att_hotel == 2) {
+                    att_hotel = 'มีบริการที่พักโรงแรมน้อย';
+                } else if (data.att_hotel == 3) {
+                    att_hotel = 'มีบริการที่พักโรงแรมปานกลาง';
+                } else {
+                    att_hotel = 'มีบริการที่พักโรงแรมมาก';
+                }
+
+                if (data.att_cafe == 1) {
+                    att_cafe = 'ไม่มีร้านคาเฟ่';
+                } else if (data.att_cafe == 2) {
+                    att_cafe = 'มีร้านคาเฟ่น้อย';
+                } else if (data.att_cafe == 3) {
+                    att_cafe = 'มีร้านคาเฟ่ปานกลาง';
+                } else {
+                    att_cafe = 'มีร้านคาเฟ่มาก';
+                }
+
+                if (data.att_security == 1) {
+                    att_security = 'ไม่มีบริการด้านความปลอดภัย';
+                } else if (data.att_security == 2) {
+                    att_security = 'มีบริการด้านความปลอดภัยน้อย';
+                } else if (data.att_security == 3) {
+                    att_security = 'มีบริการด้านความปลอดภัยปานกลาง';
+                } else {
+                    att_security = 'มีบริการด้านความปลอดภัยมาก';
+                }
+
+                if (data.att_hospital == 1) {
+                    att_hospital = 'ไม่ใกล้โรงพยาบาล';
+                } else if (data.att_hospital == 2) {
+                    att_hospital = 'ใกล้โรงพยาบาลน้อย';
+                } else if (data.att_hospital == 3) {
+                    att_hospital = 'ใกล้โรงพยาบาลปานกลาง';
+                } else {
+                    att_hospital = 'ใกล้โรงพยาบาลมาก';
+                }
+
+                if (data.att_police == 1) {
+                    att_police = 'ไม่ใกล้สถานีตำรวจ';
+                } else if (data.att_police == 2) {
+                    att_police = 'ใกล้สถานีตำรวจน้อย';
+                } else if (data.att_police == 3) {
+                    att_police = 'ใกล้สถานีตำรวจปานกลาง';
+                } else {
+                    att_police = 'ใกล้สถานีตำรวจมาก';
+                }
+
+                if (data.att_parking == 1) {
+                    att_parking = 'ไม่มีที่จอดรถ';
+                } else if (data.att_parking == 2) {
+                    att_parking = 'มีที่จอดรถน้อย';
+                } else if (data.att_parking == 3) {
+                    att_parking = 'มีที่จอดรถปานกลาง';
+                } else {
+                    att_parking = 'มีที่จอดรถมาก';
+                }
+
+
+
                 html = `
-                    <div class="col-lg-10 col-12">
+                <div class="col-lg-10 col-12">
                     <div class="single-blog-area text-center mb-100 wow fadeInUpBig" data-wow-delay="100ms" data-wow-duration="1s">
                         <div class="blog-thumbnail mb-100">
                             <img src="WEB_SYSTEM/dist/img/attractions/${data.att_image}" alt="">
@@ -66,6 +168,24 @@ require_once('permissions/detail_access.php');
                             <a href="javascript:void(0)" class="post-author">นางสาว ธัญญารัตน์ โลตุฤทธิ์</a>
                             <p>${data.att_description}</p>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-12">
+                    <div class="single-blog-area text-center mb-100 wow fadeInUpBig" data-wow-delay="100ms" data-wow-duration="1s">
+                        <div class="blog-content">
+                            <span></span>
+                            <h2>รายละเอียดสถานที่</h2>
+                        </div>
+                        <li>${att_cost}</li>
+                        <li>${att_convenience}</li>
+                        <li>${att_restaurant}</li>
+                        <li>${att_transfer}</li>
+                        <li>${att_hotel}</li>
+                        <li>${att_cafe}</li>
+                        <li>${att_security}</li>
+                        <li>${att_hospital}</li>
+                        <li>${att_police}</li>
+                        <li>${att_parking}</li>
                     </div>
                 </div>
                 <div class="col-lg-10 col-12">
