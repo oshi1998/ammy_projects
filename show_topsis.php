@@ -83,7 +83,7 @@ require_once('permissions/show_topsis_access.php');
                 <?php } ?>
             </div>
             
-            <?php if (isset($_SESSION['OTHER_DATA'])) : ?>
+            <?php if (isset($_SESSION['OTHER_DATA']) && !empty($_SESSION['OTHER_DATA'])) : ?>
                 <div class="gallery_menu">
                     <div class="portfolio-menu">
                         <h1>สถานที่ท่องเที่ยว ในจังหวัดมหาสารคาม อื่นๆ ที่คุณอาจสนใจ</h1>

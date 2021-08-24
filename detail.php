@@ -64,13 +64,13 @@ require_once('permissions/detail_access.php');
                 }
 
                 if (data.att_convenience == 1) {
-                    att_convenience = 'กานเข้าถึงไม่สะดวก';
+                    att_convenience = 'การเข้าถึงไม่สะดวก';
                 } else if (data.att_convenience == 2) {
-                    att_convenience = 'กานเข้าถึงสะดวกน้อย';
+                    att_convenience = 'การเข้าถึงสะดวกน้อย';
                 } else if (data.att_convenience == 3) {
-                    att_convenience = 'กานเข้าถึงสะดวกปานกลาง';
+                    att_convenience = 'การเข้าถึงสะดวกปานกลาง';
                 } else {
-                    att_convenience = 'กานเข้าถึงสะดวกมาก';
+                    att_convenience = 'การเข้าถึงสะดวกมาก';
                 }
 
                 if (data.att_restaurant == 1) {
