@@ -54,103 +54,103 @@ require_once('permissions/detail_access.php');
                 let html = "";
 
                 if (data.att_cost == 1) {
-                    att_cost = 'ไม่มีค่าใช้จ่าย';
+                    att_cost = 'ค่าใช้จ่ายน้อยมาก (100-500 บาท)';
                 } else if (data.att_cost == 2) {
-                    att_cost = 'ค่าใช้จ่ายน้อย';
+                    att_cost = 'ค่าใช้จ่ายน้อย (1,000-500 บาท)';
                 } else if (data.att_cost == 3) {
-                    att_cost = 'ค่าใช้จ่ายปานกลาง';
+                    att_cost = 'ค่าใช้จ่ายปานกลาง (1,000-5,000 บาท)';
                 } else {
-                    att_cost = 'ค่าใช้จ่ายมาก';
+                    att_cost = 'ค่าใช้จ่ายมาก (มากกว่า 5,000 บาท)';
                 }
 
                 if (data.att_convenience == 1) {
-                    att_convenience = 'การเข้าถึงไม่สะดวก';
+                    att_convenience = 'การเข้าถึงไม่สะดวก (ห่างจากถนนเส้นหลักมากกว่า 10 กม.)';
                 } else if (data.att_convenience == 2) {
-                    att_convenience = 'การเข้าถึงสะดวกน้อย';
+                    att_convenience = 'การเข้าถึงสะดวกน้อย (ห่างจากถนนเส้นหลัก 7-9 กม.)';
                 } else if (data.att_convenience == 3) {
-                    att_convenience = 'การเข้าถึงสะดวกปานกลาง';
+                    att_convenience = 'การเข้าถึงสะดวกปานกลาง (ห่างจากถนนเส้นหลัก 4-6 กม.)';
                 } else {
-                    att_convenience = 'การเข้าถึงสะดวกมาก';
+                    att_convenience = 'การเข้าถึงสะดวกมาก (ห่างจากถนนเส้นหลัก 1-3 กม.)';
                 }
 
                 if (data.att_restaurant == 1) {
-                    att_restaurant = 'ไม่มีร้านอาหาร';
+                    att_restaurant = 'มีร้านอาหารน้อยมาก (มี 1-2 ร้าน)';
                 } else if (data.att_restaurant == 2) {
-                    att_restaurant = 'มีร้านอาหารน้อย';
+                    att_restaurant = 'มีร้านอาหารน้อย (มี 3-5 ร้าน)';
                 } else if (data.att_restaurant == 3) {
-                    att_restaurant = 'มีร้านอาหารปานกลาง';
+                    att_restaurant = 'มีร้านอาหารปานกลาง (มี 7-9 ร้าน)';
                 } else {
-                    att_restaurant = 'มีร้านอาหารมาก';
+                    att_restaurant = 'มีร้านอาหารมาก (มี มากกว่า 10 ร้าน)';
                 }
 
                 if (data.att_transfer == 1) {
-                    att_transfer = 'ไม่มีบริการรถรับส่ง';
+                    att_transfer = 'มีบริการรถรับส่งน้อยมาก (1-2 รอบ/วัน)';
                 } else if (data.att_transfer == 2) {
-                    att_transfer = 'มีบริการรถรับส่งน้อย';
+                    att_transfer = 'มีบริการรถรับส่งน้อย (3-5 รอบ/วัน)';
                 } else if (data.att_transfer == 3) {
-                    att_transfer = 'มีบริการรถรับส่งปานกลาง';
+                    att_transfer = 'มีบริการรถรับส่งปานกลาง (มี 7-9 รอบ/วัน';
                 } else {
-                    att_transfer = 'มีบริการรถรับส่งมาก';
+                    att_transfer = 'มีบริการรถรับส่งมาก (มากกว่า 10 รอบ/วัน)';
                 }
 
                 if (data.att_hotel == 1) {
-                    att_hotel = 'ไม่มีที่พักโรงแรม';
+                    att_hotel = 'มีที่พักโรงแรมน้อยมาก (1-2 ที่)';
                 } else if (data.att_hotel == 2) {
-                    att_hotel = 'มีบริการที่พักโรงแรมน้อย';
+                    att_hotel = 'มีบริการที่พักโรงแรมน้อย (มี 3-5 ที่)';
                 } else if (data.att_hotel == 3) {
-                    att_hotel = 'มีบริการที่พักโรงแรมปานกลาง';
+                    att_hotel = 'มีบริการที่พักโรงแรมปานกลาง (มี 7-9 ที่)';
                 } else {
-                    att_hotel = 'มีบริการที่พักโรงแรมมาก';
+                    att_hotel = 'มีบริการที่พักโรงแรมมาก (มีมากกว่า 10 ที่)';
                 }
 
                 if (data.att_cafe == 1) {
-                    att_cafe = 'ไม่มีร้านคาเฟ่';
+                    att_cafe = 'มีร้านคาเฟ่น้อยมาก (มี 1-2 ร้าน)';
                 } else if (data.att_cafe == 2) {
-                    att_cafe = 'มีร้านคาเฟ่น้อย';
+                    att_cafe = 'มีร้านคาเฟ่น้อย (มี 3-5 ร้าน)';
                 } else if (data.att_cafe == 3) {
-                    att_cafe = 'มีร้านคาเฟ่ปานกลาง';
+                    att_cafe = 'มีร้านคาเฟ่ปานกลาง (มี 7-9 ร้าน)';
                 } else {
-                    att_cafe = 'มีร้านคาเฟ่มาก';
+                    att_cafe = 'มีร้านคาเฟ่มาก (มีมากกว่า 10 ร้าน)';
                 }
 
                 if (data.att_security == 1) {
-                    att_security = 'ไม่มีบริการด้านความปลอดภัย';
+                    att_security = 'มีบริการด้านความปลอดภัยน้อยมาก (1-2 นาย)';
                 } else if (data.att_security == 2) {
-                    att_security = 'มีบริการด้านความปลอดภัยน้อย';
+                    att_security = 'มีบริการด้านความปลอดภัยน้อย (ตำรวจท้องที่, รปภ. มากกว่า 3-5 นาย)';
                 } else if (data.att_security == 3) {
-                    att_security = 'มีบริการด้านความปลอดภัยปานกลาง';
+                    att_security = 'มีบริการด้านความปลอดภัยปานกลาง (ตำรวจท้องที่, รปภ. มากกว่า 7-9 นาย)';
                 } else {
-                    att_security = 'มีบริการด้านความปลอดภัยมาก';
+                    att_security = 'มีบริการด้านความปลอดภัยมาก (ตำรวจท้องที่, รปภ. มากกว่า 10 นาย)';
                 }
 
                 if (data.att_hospital == 1) {
-                    att_hospital = 'ไม่ใกล้โรงพยาบาล';
+                    att_hospital = 'ไม่ใกล้โรงพยาบาล (ห่างจากจุดท่องเที่ยว 10 กม.)';
                 } else if (data.att_hospital == 2) {
-                    att_hospital = 'ใกล้โรงพยาบาลน้อย';
+                    att_hospital = 'ใกล้โรงพยาบาลน้อย (ห่างจากจุดท่องเที่ยว 7-9 กม.)';
                 } else if (data.att_hospital == 3) {
-                    att_hospital = 'ใกล้โรงพยาบาลปานกลาง';
+                    att_hospital = 'ใกล้โรงพยาบาลปานกลาง (ห่างจากจุดท่องเที่ยว 4-6 กม.)';
                 } else {
-                    att_hospital = 'ใกล้โรงพยาบาลมาก';
+                    att_hospital = 'ใกล้โรงพยาบาลมาก (ห่างจากจุดท่องเที่ยว 1-3 กม.)';
                 }
 
                 if (data.att_police == 1) {
-                    att_police = 'ไม่ใกล้สถานีตำรวจ';
+                    att_police = 'ไม่ใกล้สถานีตำรวจ (ห่างจากจุดท่องเที่ยว 10 กม.)';
                 } else if (data.att_police == 2) {
-                    att_police = 'ใกล้สถานีตำรวจน้อย';
+                    att_police = 'ใกล้สถานีตำรวจน้อย (ห่างจากจุดท่องเที่ยว 7-9 กม.)';
                 } else if (data.att_police == 3) {
-                    att_police = 'ใกล้สถานีตำรวจปานกลาง';
+                    att_police = 'ใกล้สถานีตำรวจปานกลาง (ห่างจากจุดท่องเที่ยว 4-6 กม.)';
                 } else {
-                    att_police = 'ใกล้สถานีตำรวจมาก';
+                    att_police = 'ใกล้สถานีตำรวจมาก (ห่างจากจุดท่องเที่ยว 1-3 กม.)';
                 }
 
                 if (data.att_parking == 1) {
-                    att_parking = 'ไม่มีที่จอดรถ';
+                    att_parking = 'มีที่จอดรถน้อยมาก (มี 1-2 คัน)';
                 } else if (data.att_parking == 2) {
-                    att_parking = 'มีที่จอดรถน้อย';
+                    att_parking = 'มีที่จอดรถน้อย (จอดได้ 3-5 คัน)';
                 } else if (data.att_parking == 3) {
-                    att_parking = 'มีที่จอดรถปานกลาง';
+                    att_parking = 'มีที่จอดรถปานกลาง (จอดได้ 7-9 คัน)';
                 } else {
-                    att_parking = 'มีที่จอดรถมาก';
+                    att_parking = 'มีที่จอดรถมาก (จอดได้มากกว่า 10 คัน)';
                 }
 
 
@@ -176,16 +176,16 @@ require_once('permissions/detail_access.php');
                             <span></span>
                             <h2>รายละเอียดสถานที่</h2>
                         </div>
-                        <li>${att_cost}</li>
                         <li>${att_convenience}</li>
-                        <li>${att_restaurant}</li>
-                        <li>${att_transfer}</li>
-                        <li>${att_hotel}</li>
                         <li>${att_cafe}</li>
-                        <li>${att_security}</li>
-                        <li>${att_hospital}</li>
-                        <li>${att_police}</li>
                         <li>${att_parking}</li>
+                        <li>${att_restaurant}</li>
+                        <li>${att_hospital}</li>
+                        <li>${att_security}</li>
+                        <li>${att_cost}</li>
+                        <li>${att_transfer}</li>
+                        <li>${att_hotel}</li>       
+                        <li>${att_police}</li>
                     </div>
                 </div>
                 <div class="col-lg-10 col-12">

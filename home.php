@@ -31,7 +31,7 @@
                 $('title').text(res.data['web_name']);
                 $('meta[name=description]').attr('content', res.data['web_description']);
                 $('meta[name=keywords]').attr('content', res.data['web_keywords']);
-                $('link[rel=icon]').attr('href','WEB_SYSTEM/dist/img/'+res.data['web_logo']);
+                $('link[rel=icon]').attr('href', 'WEB_SYSTEM/dist/img/' + res.data['web_logo']);
             }).fail(function(res) {
                 console.log(res);
             });
@@ -39,7 +39,7 @@
     </script>
 </head>
 
-<body onload="loadWebsite()">
+<body onload="loadWebsite(),loadGoogleMaps()">
     <!-- Preloader -->
     <div id="preloader">
         <div class="showbox">
@@ -122,6 +122,106 @@
         </div>
     </section>
     <!-- ***** Welcome Area End ***** -->
+
+    <div class="container-fluid mt-50">
+
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        แผนที่สถานที่ท่องเที่ยว
+                    </div>
+                    <div class="card-body">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d245219.27917254457!2d103.17437731136629!3d16.192076577468914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z4Liq4LiW4Liy4LiZ4LiX4Li14LmI4LiX4LmI4Lit4LiH4LmA4LiX4Li14LmI4Lii4Lin4Liq4Liy4Lij4LiE4Liy4Lih!5e0!3m2!1sth!2sth!4v1635371613644!5m2!1sth!2sth" width="100%" height="760" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        สถานที่แนะนำ
+                    </div>
+                    <div class="card-body">
+                        <?php require_once('services/suggestAtt.php') ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-50">
+            <div class="col-md-6 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        ร้านอาหาร,คาเฟ่ ยอดฮิต แนะนำ!
+                    </div>
+                    <div class="card-body">
+                        <div class="row mt-15">
+                            <div class="col-3">
+                                <img src="dist/img/res & cafe/01.jpg">
+                            </div>
+                            <div class="col-9">
+                                <strong>คาเฟ่ กทม. @มหาสารคาม</strong>
+                                <p>อาหารอร่อย ราคาเหมาะสม ที่จอดรถกว้างขวาง พนักงานต้อนรับเป็นมิตร</p>
+                                <p>ถ. แจ้งสนิท ตำบล ตลาด อำเภอเมืองมหาสารคาม มหาสารคาม 44000</p>
+                            </div>
+                        </div>
+                        <div class="row mt-15">
+                            <div class="col-3">
+                                <img src="dist/img/res & cafe/02.jpg">
+                            </div>
+                            <div class="col-9">
+                                <strong>ร้านอาหาร ฟิลด์ชายน์ คาเฟ่</strong>
+                                <p>บรรยากาศสบายๆ แต่ควรมาช่วงเย็น เพราะกลางวันอากาศร้อน ส่วนเรื่องอาหารก็อร่อยใช้ได้ เครื่องดื่มก็อร่อย และที่สำคัญอยู่ใกล้เมืองมหาสารคาม</p>
+                                <p>เลขที่ 33/4 บ้านนางใย (คุ้มวัดอุทัยทิศ2) ตลาด ชานเมือง เมือง มหาสารคาม 44000</p>
+                            </div>
+                        </div>
+                        <div class="row mt-15">
+                            <div class="col-3">
+                                <img src="dist/img/res & cafe/03.jpg">
+                            </div>
+                            <div class="col-9">
+                                <strong>5th Avenue cafe maha sarakham</strong>
+                                <p>บรรยากาศดี ของหวานอร่อย ของคาวก็อร่อย ไม่แพงมาก กำลังดี เป็นที่ Hangout ที่นึงในเมืองสารคามที่แนะนำ</p>
+                                <p>ตำบล ตลาด อำเภอเมืองมหาสารคาม มหาสารคาม 44000</p>
+                            </div>
+                        </div>
+                        <div class="row mt-15">
+                            <div class="col-3">
+                                <img src="dist/img/res & cafe/04.jpg">
+                            </div>
+                            <div class="col-9">
+                                <strong>MACAFF Coffee</strong>
+                                <p>ร้านไม่ใหญ่ หาง่ายเดินทางสะดวกสบาย ไม่ค่อยมีที่จอดรถ ภายในร้านสะอาดดี ห้องน้ำสะอาด แอร์เย็นสบาย มีเพลงฟัง มีไวไฟและปลั๊กไฟให้ มอคค่าอร่อยดีราคาไม่แพง ไม่ค่อยมีเค้ก รวมๆแล้วดีต่อใจ มาแล้วอยากมาอีก</p>
+                                <p>ถนนถีนานนท์ ตำบล ตลาด อำเภอเมืองมหาสารคาม มหาสารคาม 44000</p>
+                            </div>
+                        </div>
+                        <div class="row mt-15">
+                            <div class="col-3">
+                                <img src="dist/img/res & cafe/05.jpg">
+                            </div>
+                            <div class="col-9">
+                                <strong>Arte'cafe</strong>
+                                <p>บรรยากาศแบบสบายๆ จิบกาแฟ กินขนม นั่งคุยกันเบาๆ</p>
+                                <p>208 ตำบล ตลาด อำเภอเมืองมหาสารคาม มหาสารคาม 44000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        แผนที่ร้านอาหาร,คาเฟ่
+                    </div>
+                    <div class="card-body">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30653.945169293576!2d103.29064543433022!3d16.18219080693416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z4Lij4LmJ4Liy4LiZ4Lit4Liy4Lir4Liy4LijLOC4hOC4suC5gOC4n-C5iCDguKrguLLguKPguITguLLguKE!5e0!3m2!1sth!2sth!4v1635375184544!5m2!1sth!2sth" width="100%" height="760" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br>
+    </div>
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="dist/js/jquery/jquery-2.2.4.min.js"></script>
