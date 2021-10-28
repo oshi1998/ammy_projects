@@ -64,28 +64,96 @@
             <!-- Carousel Inner -->
             <div class="carousel-inner h-100">
 
-                <div class="carousel-item h-100 bg-img active" style="background-image: url(dist/img/bg-img/1.jpg);">
+
+                <div class="carousel-item h-100 bg-img active" style="background-image: url(dist/img/bg-img/2.jpg);">
                     <div class="carousel-content h-100">
+                        <div class="card" style="margin-left:300px">
+                            <div class="card-body">
+                                <h1>1. พระบรมธาตุนาดูน</h1>
+                                <p>
+                                    พระบรมธาตุนาดูน เป็นปูชนียสถานที่สร้างขึ้นเพื่อความเป็นสิริมงคลของภาคอีสาน <br>
+                                    และเป็นที่สักการะบูชาของชาวบ้าน จำลองแบบจากสถูปสำริดที่บรรจุพระบรมสารีริกธาตุ <br>
+                                    โดยฐานเป็นแบบศิลปะแบบทวาราวดี ตกแต่งด้วยลวดลายลวดบัวสวยงาม รอบๆ องค์พระบรมธาตุนาดูน <br>
+                                    ยังเต็มไปด้วยพรรณไม้ต่างๆ ร่มรื่นของ สถาบันวิจัยรุกขเวช
+                                </p>
+                                <div class="float-right">
+                                    <a href="detail.php?id=17" class="btn btn-info">รายละเอียดเพิ่มเติม</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/2.jpg);">
+                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/1.jpg);">
                     <div class="carousel-content h-100">
+                        <div class="card" style="margin-left:300px">
+                            <div class="card-body">
+                                <h1>2. สะพานไม้แกดำ</h1>
+                                <p>
+                                    ท่ามกลางบึงบัวและพืชน้ำสีเขียวและความหลากทางธรรมชาติ <br>
+                                    ถือว่าเป็นสะพานสุด Unseen อีกแห่งหนึ่ง ที่ควรค่า <br>
+                                    แห่งการเดินทางมาเช็คอิน ณ มหาสารคาม
+                                </p>
+                                <div class="float-right">
+                                    <a href="detail.php?id=19" class="btn btn-info">รายละเอียดเพิ่มเติม</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/3.jpg);">
+
+
+                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/13.jpg);">
                     <div class="carousel-content h-100">
+                        <div class="card" style="margin-left:300px">
+                            <div class="card-body">
+                                <h1>3. วัดป่าวังน้ำเย็น</h1>
+                                <p>
+                                    วัดป่าวังน้ำเย็น หรือ วัดพุทธวนาราม วัดดัง มหาสารคาม ที่ตั้งอยู่ในอำเภอเมืองมหาสารคาม <br>
+                                    สร้างขึ้นโดย พระอาจารย์ สุริยันต์ โฆสปัญโญ พระเกจิอาจารย์ชื่อดัง ศิษย์ของ หลวงปู่คำพันธ์ โฆสปัญโญ <br>
+                                    เพื่อเป็นศูนย์รวมจิตใจของพุทธศาสนิกชน
+                                </p>
+                                <div class="float-right">
+                                    <a href="detail.php?id=26" class="btn btn-info">รายละเอียดเพิ่มเติม</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/4.jpeg);">
+                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/4.jpg);">
                     <div class="carousel-content h-100">
+                        <div class="card" style="margin-left:300px">
+                            <div class="card-body">
+                                <h1>4. วัดหนองหูลิง</h1>
+                                <p>
+                                    วัดหนองหูลิง เป็นวัดเก่าแก่ที่สร้างขึ้นในปี พ.ศ.2476 เป็นวัดที่มีความสวยงาม และโดดเด่นคือ <br>
+                                    อุโบสถรูปทรงเรืออนันตนาคราช ออกแบบโดยท่านเจ้าอาวาส พระครูบวรธรรมปคุณ ซึ่งมีรูปทรงแตกต่าง <br>
+                                    ไปจากอุโบสถของวัดอื่นๆ ในมหาสารคาม คือ เป็นอุโบสถรูปเรือ หมายถึง เรือบุญ
+                                </p>
+                                <div class="float-right">
+                                    <a href="detail.php?id=27" class="btn btn-info">รายละเอียดเพิ่มเติม</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/5.jpg);">
+                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/5.jpeg);">
                     <div class="carousel-content h-100">
+                        <div class="card" style="margin-left:300px">
+                            <div class="card-body">
+                                <h1>5. กู่สันตรัตน์</h1>
+                                <p>
+                                    กู่สันตรัตน์ โบราณสถานซึ่งสร้างขึ้นสมัยพระเจ้าชัยวรมันที่ 7 ประมาณพุทธศตวรรษที่ 18 <br>
+                                    ด้วยหินทรายในแบบศิลปะขอมบายน เป็นลักษณะของโรคยาศาล ซึ่งยังคงอยู่ในสภาพค่อนข้างสมบูรณ์และสวยงาม
+                                </p>
+                                <div class="float-right">
+                                    <a href="detail.php?id=22" class="btn btn-info">รายละเอียดเพิ่มเติม</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/6.jpg);">
+                <!-- <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/6.jpg);">
                     <div class="carousel-content h-100">
                     </div>
                 </div>
@@ -104,10 +172,18 @@
                 <div class="carousel-item h-100 bg-img" style="background-image: url(dist/img/bg-img/10.jpg);">
                     <div class="carousel-content h-100">
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- Carousel Indicators -->
-            <ol class="carousel-indicators">
+            <a class="carousel-control-prev" href="#welcomeSlider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#welcomeSlider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!-- <ol class="carousel-indicators">
                 <li data-target="#welcomeSlider" data-slide-to="0" class="active bg-img" style="background-image: url(dist/img/bg-img/1.jpg);"></li>
                 <li data-target="#welcomeSlider" data-slide-to="1" class="bg-img" style="background-image: url(dist/img/bg-img/2.jpg);"></li>
                 <li data-target="#welcomeSlider" data-slide-to="2" class="bg-img" style="background-image: url(dist/img/bg-img/3.jpg);"></li>
@@ -118,7 +194,7 @@
                 <li data-target="#welcomeSlider" data-slide-to="7" class="bg-img" style="background-image: url(dist/img/bg-img/8.jpg);"></li>
                 <li data-target="#welcomeSlider" data-slide-to="8" class="bg-img" style="background-image: url(dist/img/bg-img/9.jpg);"></li>
                 <li data-target="#welcomeSlider" data-slide-to="9" class="bg-img" style="background-image: url(dist/img/bg-img/10.jpg);"></li>
-            </ol>
+            </ol> -->
         </div>
     </section>
     <!-- ***** Welcome Area End ***** -->
@@ -128,7 +204,7 @@
         <div class="row">
             <div class="col-md-6 col-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-success text-white">
                         แผนที่สถานที่ท่องเที่ยว
                     </div>
                     <div class="card-body">
@@ -138,7 +214,7 @@
             </div>
             <div class="col-md-6 col-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-primary text-white">
                         สถานที่แนะนำ
                     </div>
                     <div class="card-body">
@@ -151,7 +227,7 @@
         <div class="row mt-50">
             <div class="col-md-6 col-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-primary text-white">
                         ร้านอาหาร,คาเฟ่ ยอดฮิต แนะนำ!
                     </div>
                     <div class="card-body">
@@ -210,7 +286,7 @@
             </div>
             <div class="col-md-6 col-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-success text-white">
                         แผนที่ร้านอาหาร,คาเฟ่
                     </div>
                     <div class="card-body">
@@ -219,7 +295,7 @@
                 </div>
             </div>
         </div>
-        
+
         <br><br><br>
     </div>
 

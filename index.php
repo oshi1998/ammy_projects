@@ -37,6 +37,14 @@
     <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
     <!--===============================================================================================-->
 
+    <style>
+        #loginBG {
+            background-image: url('dist/img//bg-img/11.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+
     <script>
         function loadWebsite() {
             $.ajax({
@@ -48,7 +56,7 @@
                 $('title').text(res.data['web_name']);
                 $('meta[name=description]').attr('content', res.data['web_description']);
                 $('meta[name=keywords]').attr('content', res.data['web_keywords']);
-                $('link[rel=icon]').attr('href','WEB_SYSTEM/dist/img/'+res.data['web_logo']);
+                $('link[rel=icon]').attr('href', 'WEB_SYSTEM/dist/img/' + res.data['web_logo']);
             }).fail(function(res) {
                 console.log(res);
             });
@@ -131,7 +139,7 @@
                         </div>
                     </form>
                 <?php endif ?>
-                <div class="login100-more" style="background-image: url('dist/img//bg-img/1.jpg')"></div>
+                <div class="login100-more" id="loginBG"></div>
             </div>
         </div>
     </div>
